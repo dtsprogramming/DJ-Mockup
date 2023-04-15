@@ -123,6 +123,78 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &35203293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 35203294}
+  - component: {fileID: 35203296}
+  - component: {fileID: 35203295}
+  m_Layer: 0
+  m_Name: pos42
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &35203294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35203293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.69, y: -0.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &35203295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35203293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &35203296
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35203293}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015718147, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2979258, y: 0.33984065}
+  m_EdgeRadius: 0
 --- !u!1 &73257010
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73257010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 0.44, z: 0}
+  m_LocalPosition: {x: 2.22, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,21 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 73257011}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &73257013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,7 +254,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000029802322, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -207,7 +265,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.30840468, y: 0.3447081}
   m_EdgeRadius: 0
 --- !u!1 &104200858
 GameObject:
@@ -369,7 +427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138214606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.12, y: 3.85, z: 0}
+  m_LocalPosition: {x: 1.03, y: 0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -388,21 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 138214607}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &138214609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -416,7 +460,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000052154064, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -427,7 +471,151 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.26648986, y: 0.39223436}
+  m_EdgeRadius: 0
+--- !u!1 &138286240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138286241}
+  - component: {fileID: 138286243}
+  - component: {fileID: 138286242}
+  m_Layer: 0
+  m_Name: pos40
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &138286241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138286240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.04, y: -0.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138286242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138286240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &138286243
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138286240}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0023096874, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.33894318, y: 0.40181565}
+  m_EdgeRadius: 0
+--- !u!1 &246939945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246939946}
+  - component: {fileID: 246939948}
+  - component: {fileID: 246939947}
+  m_Layer: 0
+  m_Name: pos53
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246939946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246939945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.08, y: -2.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246939947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246939945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &246939948
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246939945}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015718102, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3188833, y: 0.402713}
   m_EdgeRadius: 0
 --- !u!1 &295316224
 GameObject:
@@ -457,8 +645,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295316224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.86, y: -0.06, z: 0}
-  m_LocalScale: {x: 0.12898012, y: 0.12898012, z: 0.12898012}
+  m_LocalPosition: {x: -3.27, y: 0.28, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1411584470}
@@ -603,7 +791,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354107023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8, y: 3.85, z: 0}
+  m_LocalPosition: {x: 0.454, y: 2.324, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -622,21 +810,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 354107024}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions:
+  - {fileID: 928753055}
+  - {fileID: 608343188}
+  - {fileID: 1338086777}
+  - {fileID: 2014721884}
 --- !u!61 &354107026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -650,7 +828,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.055943877, y: 0}
+  m_Offset: {x: -0.0065245107, y: -0.009071089}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -661,7 +839,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2610698, y: 1.2610698}
+  m_Size: {x: 0.23973747, y: 0.3317483}
+  m_EdgeRadius: 0
+--- !u!1 &364252376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364252377}
+  - component: {fileID: 364252379}
+  - component: {fileID: 364252378}
+  m_Layer: 0
+  m_Name: pos47
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &364252377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364252376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.32, y: -1.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &364252378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364252376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &364252379
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364252376}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015718095, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.29792577, y: 0.3607981}
   m_EdgeRadius: 0
 --- !u!1 &367660791
 GameObject:
@@ -728,6 +978,23 @@ Transform:
   - {fileID: 1678627253}
   - {fileID: 680174559}
   - {fileID: 1517209126}
+  - {fileID: 849011860}
+  - {fileID: 2094706012}
+  - {fileID: 927868080}
+  - {fileID: 138286241}
+  - {fileID: 982421532}
+  - {fileID: 35203294}
+  - {fileID: 2109230839}
+  - {fileID: 1481464300}
+  - {fileID: 613648275}
+  - {fileID: 1084747564}
+  - {fileID: 364252377}
+  - {fileID: 1805840388}
+  - {fileID: 1712347166}
+  - {fileID: 678409585}
+  - {fileID: 1664330533}
+  - {fileID: 539337544}
+  - {fileID: 246939946}
   m_Father: {fileID: 1205064548}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -792,7 +1059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453923199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1, y: -1.29, z: 0}
+  m_LocalPosition: {x: -1.65, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -811,21 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 453923200}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &453923202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -839,7 +1092,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.010478795, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -850,7 +1103,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.37127703, y: 0.4131919}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -962,7 +1215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528151304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.13, y: -2.99, z: 0}
+  m_LocalPosition: {x: 3.2, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -981,21 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 528151305}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &528151307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1009,7 +1248,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.010478385, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1020,7 +1259,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2874475, y: 0.36079857}
+  m_EdgeRadius: 0
+--- !u!1 &539337543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539337544}
+  - component: {fileID: 539337546}
+  - component: {fileID: 539337545}
+  m_Layer: 0
+  m_Name: pos52
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539337544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539337543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.42, y: -2.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539337545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539337543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &539337546
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539337543}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000044703484, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.26648983, y: 0.37127697}
   m_EdgeRadius: 0
 --- !u!1 &608343187
 GameObject:
@@ -1048,7 +1359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608343187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: 5.54, z: 0}
+  m_LocalPosition: {x: 0.148, y: 2.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1067,21 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 608343188}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &608343190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1095,7 +1392,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0060727857, y: 0.008917332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1106,7 +1403,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2510267, y: 0.3263077}
+  m_EdgeRadius: 0
+--- !u!1 &613648274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613648275}
+  - component: {fileID: 613648277}
+  - component: {fileID: 613648276}
+  m_Layer: 0
+  m_Name: pos45
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &613648275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613648274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.46, y: -1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613648276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613648274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &613648277
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613648274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0052394047, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31888342, y: 0.42367065}
   m_EdgeRadius: 0
 --- !u!1 &625100536
 GameObject:
@@ -1268,7 +1637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674133244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.83, y: -1.32, z: 0}
+  m_LocalPosition: {x: 2.5, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1287,21 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 674133245}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &674133247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1315,7 +1670,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010478698, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1326,7 +1681,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28744698, y: 0.35031962}
   m_EdgeRadius: 0
 --- !u!1 &674615829
 GameObject:
@@ -1354,7 +1709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674615829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.78, y: -1.25, z: 0}
+  m_LocalPosition: {x: 2.46, y: 0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1373,21 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 674615830}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &674615832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1401,7 +1742,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01864776, y: 0}
+  m_Offset: {x: 0.01802773, y: 0.038467884}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1412,7 +1753,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.26107, y: 1.26107}
+  m_Size: {x: 0.3284642, y: 0.345837}
   m_EdgeRadius: 0
 --- !u!1 &678226632
 GameObject:
@@ -1440,7 +1781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678226632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.06, y: 2.12, z: 0}
+  m_LocalPosition: {x: -0.3, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1459,21 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 678226633}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &678226635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1487,7 +1814,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000037252903, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1498,7 +1825,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.30840462, y: 0.44462797}
+  m_EdgeRadius: 0
+--- !u!1 &678409584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678409585}
+  - component: {fileID: 678409587}
+  - component: {fileID: 678409586}
+  m_Layer: 0
+  m_Name: pos50
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &678409585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678409584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.43, y: -1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &678409586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678409584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &678409587
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678409584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.005239427, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31888348, y: 0.32936215}
   m_EdgeRadius: 0
 --- !u!1 &680174558
 GameObject:
@@ -1526,7 +1925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680174558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.09, y: 0.47, z: 0}
+  m_LocalPosition: {x: -0.58, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1545,21 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 680174559}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &680174561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1573,7 +1958,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010478862, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1584,7 +1969,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.30840498, y: 0.41319203}
   m_EdgeRadius: 0
 --- !u!1 &697907718
 GameObject:
@@ -1614,8 +1999,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697907718}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -3.31, z: 0}
-  m_LocalScale: {x: 0.46310332, y: 0.46310332, z: 0.35623333}
+  m_LocalPosition: {x: 3.53, y: -5.32, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 383486394}
@@ -1759,7 +2144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783801194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.81, y: 5.54, z: 0}
+  m_LocalPosition: {x: 1.143, y: 3.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1778,21 +2163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 783801195}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions:
+  - {fileID: 1751888047}
+  - {fileID: 1825496797}
 --- !u!61 &783801197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1806,7 +2179,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.011865199, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1817,7 +2190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.31471783, y: 0.4048088}
   m_EdgeRadius: 0
 --- !u!1 &795337757
 GameObject:
@@ -1845,7 +2218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795337757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.74, y: 0.4, z: 0}
+  m_LocalPosition: {x: 1.61, y: 2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1864,21 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 795337758}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &795337760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1892,7 +2251,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.037294656, y: 0}
+  m_Offset: {x: -0.0110979155, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1903,7 +2262,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2983668, y: 1.2983668}
+  m_Size: {x: 0.3867182, y: 0.52294165}
+  m_EdgeRadius: 0
+--- !u!1 &849011859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849011860}
+  - component: {fileID: 849011862}
+  - component: {fileID: 849011861}
+  m_Layer: 0
+  m_Name: pos37
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &849011860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849011859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21, y: -0.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849011861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849011859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &849011862
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849011859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015718106, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27696842, y: 0.35031942}
   m_EdgeRadius: 0
 --- !u!1 &873843466
 GameObject:
@@ -1931,7 +2362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873843466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.82, y: 3.85, z: 0}
+  m_LocalPosition: {x: 1.53, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1950,21 +2381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 873843467}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &873843469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1978,7 +2395,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0052393526, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1989,7 +2406,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.29792586, y: 0.4446279}
+  m_EdgeRadius: 0
+--- !u!1 &927868079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927868080}
+  - component: {fileID: 927868082}
+  - component: {fileID: 927868081}
+  m_Layer: 0
+  m_Name: pos39
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927868080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927868079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.28, y: -0.13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927868081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927868079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &927868082
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927868079}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.018647686, y: 0.03729558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2853084, y: 0.40057445}
   m_EdgeRadius: 0
 --- !u!1 &928753054
 GameObject:
@@ -2017,7 +2506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928753054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16, y: 5.54, z: 0}
+  m_LocalPosition: {x: 0.49, y: 3.204, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2036,21 +2525,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 928753055}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions:
+  - {fileID: 1751888047}
+  - {fileID: 354107024}
+  - {fileID: 1825496797}
+  - {fileID: 1913569388}
 --- !u!61 &928753057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2064,7 +2543,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0025734603, y: 0.0113370195}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2075,7 +2554,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32574546, y: 0.41533023}
   m_EdgeRadius: 0
 --- !u!1 &946471260
 GameObject:
@@ -2103,7 +2582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946471260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.13, y: 3.84, z: 0}
+  m_LocalPosition: {x: 1.47, y: 1.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2122,21 +2601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 946471261}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &946471263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2150,7 +2615,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.005239442, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2161,7 +2626,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.33984086, y: 0.3503196}
+  m_EdgeRadius: 0
+--- !u!1 &982421531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982421532}
+  - component: {fileID: 982421534}
+  - component: {fileID: 982421533}
+  m_Layer: 0
+  m_Name: pos41
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982421532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982421531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.55, y: -0.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982421533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982421531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &982421534
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982421531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.005239375, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27696884, y: 0.32936215}
   m_EdgeRadius: 0
 --- !u!1 &1081943720
 GameObject:
@@ -2191,8 +2728,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081943720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9, y: 0, z: 0}
-  m_LocalScale: {x: 0.323111, y: 0.323111, z: 0.323111}
+  m_LocalPosition: {x: 9.66, y: 0.15, z: 0}
+  m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 383486394}
@@ -2310,6 +2847,78 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1084747563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084747564}
+  - component: {fileID: 1084747566}
+  - component: {fileID: 1084747565}
+  m_Layer: 0
+  m_Name: pos46
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084747564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084747563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.94, y: -1.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084747565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084747563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &1084747566
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084747563}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0052393377, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31888348, y: 0.40271318}
+  m_EdgeRadius: 0
 --- !u!1 &1104799480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,7 +2945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104799480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.81, y: -2.93, z: 0}
+  m_LocalPosition: {x: 3.12, y: 0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2355,21 +2964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1104799481}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1104799483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2383,7 +2978,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000014901161, y: 0.030774303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2394,7 +2989,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.35031974, y: 0.4249944}
   m_EdgeRadius: 0
 --- !u!1 &1121612727
 GameObject:
@@ -2422,7 +3017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121612727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.07, y: 0.4, z: 0}
+  m_LocalPosition: {x: -0.97, y: 0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2441,21 +3036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1121612728}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1121612730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2469,7 +3050,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.010478668, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2480,7 +3061,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28744745, y: 0.38175583}
   m_EdgeRadius: 0
 --- !u!1 &1132252939
 GameObject:
@@ -2508,7 +3089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132252939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.06, y: 0.44, z: 0}
+  m_LocalPosition: {x: -0.43, y: 0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2527,21 +3108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1132252940}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1132252942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2555,7 +3122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012947172, y: 0}
+  m_Offset: {x: -0.007707864, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2566,7 +3133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.97410566, y: 1}
+  m_Size: {x: 0.35586154, y: 0.46213666}
   m_EdgeRadius: 0
 --- !u!1 &1172248799
 GameObject:
@@ -2594,7 +3161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172248799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.05, y: 2.08, z: 0}
+  m_LocalPosition: {x: 0.14, y: 0.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2613,21 +3180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1172248800}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1172248802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2641,7 +3194,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.020957522, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2652,7 +3205,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.30840486, y: 0.35031947}
   m_EdgeRadius: 0
 --- !u!1 &1205064546
 GameObject:
@@ -2666,7 +3219,7 @@ GameObject:
   - component: {fileID: 1205064547}
   - component: {fileID: 1205064549}
   m_Layer: 0
-  m_Name: GameBoard
+  m_Name: Gameboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2713,8 +3266,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -20
-  m_Sprite: {fileID: 21300000, guid: b0646bd8434874244a55c9697c0119b3, type: 3}
-  m_Color: {r: 0.3584906, g: 0.34989932, b: 0.3094518, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 109e0862906a470429e939eb11640220, type: 3}
+  m_Color: {r: 0.4031684, g: 0.46275944, b: 0.5660378, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2732,8 +3285,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205064546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.82405335, y: 0.82405335, z: 0.82405335}
+  m_LocalPosition: {x: 2.8, y: -0.2, z: 0}
+  m_LocalScale: {x: 2.0708818, y: 1.4102784, z: 1.2980013}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 367660792}
@@ -3189,7 +3742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262475622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.82, y: 2.13, z: 0}
+  m_LocalPosition: {x: 2.66, y: 1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3208,21 +3761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1262475623}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1262475625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3236,7 +3775,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.015718006, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3247,7 +3786,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.36079848, y: 0.4446281}
   m_EdgeRadius: 0
 --- !u!1 &1286294973
 GameObject:
@@ -3410,7 +3949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338086776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.82, y: -4.73, z: 0}
+  m_LocalPosition: {x: 0.13, y: 1.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3429,21 +3968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1338086777}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1338086779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3457,7 +3982,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0052393377, y: 0.023080759}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3468,7 +3993,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.40271306, y: 0.47181743}
   m_EdgeRadius: 0
 --- !u!1 &1343185029
 GameObject:
@@ -3496,7 +4021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343185029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.86, y: -2.93, z: 0}
+  m_LocalPosition: {x: 3.52, y: 0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3515,21 +4040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1343185030}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1343185032
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3543,7 +4054,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0052394867, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3554,7 +4065,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2979259, y: 0.37127692}
   m_EdgeRadius: 0
 --- !u!1 &1411584469
 GameObject:
@@ -3666,7 +4177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471105282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.14, y: -4.77, z: 0}
+  m_LocalPosition: {x: 1.82, y: 1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3685,21 +4196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1471105283}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1471105285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3713,7 +4210,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.02095741, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3724,7 +4221,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3503195, y: 0.47469112}
   m_EdgeRadius: 0
 --- !u!1 &1474835572
 GameObject:
@@ -3752,7 +4249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474835572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 3.84, z: 0}
+  m_LocalPosition: {x: 2.08, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3771,21 +4268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1474835573}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1474835575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3799,7 +4282,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000008940697, y: -0.0076936036}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3810,7 +4293,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32936227, y: 0.39648113}
+  m_EdgeRadius: 0
+--- !u!1 &1481464299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481464300}
+  - component: {fileID: 1481464302}
+  - component: {fileID: 1481464301}
+  m_Layer: 0
+  m_Name: pos44
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1481464300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481464299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.04, y: -1.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481464301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481464299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &1481464302
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481464299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015718043, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31888336, y: 0.35090488}
   m_EdgeRadius: 0
 --- !u!1 &1517209125
 GameObject:
@@ -3838,7 +4393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517209125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.82, y: 0.47, z: 0}
+  m_LocalPosition: {x: -0.06, y: -0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3857,21 +4412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1517209126}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1517209128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3885,7 +4426,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005239412, y: 0.023080744}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3896,7 +4437,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.29792586, y: 0.39648092}
   m_EdgeRadius: 0
 --- !u!1 &1531373456
 GameObject:
@@ -3926,8 +4467,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531373456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 3.44, z: 0}
-  m_LocalScale: {x: 0.3956581, y: 0.3956581, z: 0.3956581}
+  m_LocalPosition: {x: 2.6797917, y: 5.24793, z: -0.048487563}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 383486394}
@@ -4205,7 +4746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598733082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.08, y: -1.32, z: 0}
+  m_LocalPosition: {x: -1.03, y: 1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4224,21 +4765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1598733083}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1598733085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4252,7 +4779,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000020116568, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4263,7 +4790,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.41319168, y: 0.44494686}
   m_EdgeRadius: 0
 --- !u!1 &1612682920
 GameObject:
@@ -4291,7 +4818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612682920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.76, y: 0.44, z: 0}
+  m_LocalPosition: {x: 1.88, y: 0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4310,21 +4837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1612682921}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1612682923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4338,7 +4851,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01864767, y: 0.03729561}
+  m_Offset: {x: 0.013408303, y: -0.001172334}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4349,7 +4862,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1864781, y: 1.1864781}
+  m_Size: {x: 0.29578733, y: 0.3893277}
   m_EdgeRadius: 0
 --- !u!1 &1653289691
 GameObject:
@@ -4377,7 +4890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653289691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.79, y: -3.01, z: 0}
+  m_LocalPosition: {x: -0.55, y: 1.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4396,21 +4909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1653289692}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1653289694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4424,7 +4923,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000014901161, y: -0.0076935887}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4435,7 +4934,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.41319197, y: 0.5209022}
+  m_EdgeRadius: 0
+--- !u!1 &1664330532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664330533}
+  - component: {fileID: 1664330535}
+  - component: {fileID: 1664330534}
+  m_Layer: 0
+  m_Name: pos51
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1664330533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664330532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.82, y: -2.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1664330534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664330532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &1664330535
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664330532}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0052393675, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.297926, y: 0.38175565}
   m_EdgeRadius: 0
 --- !u!1 &1678627252
 GameObject:
@@ -4463,7 +5034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678627252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: -1.32, z: 0}
+  m_LocalPosition: {x: 2.93, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4482,21 +5053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1678627253}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1678627255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4510,7 +5067,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.005239114, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4521,7 +5078,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3188832, y: 0.35031953}
+  m_EdgeRadius: 0
+--- !u!1 &1712347165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712347166}
+  - component: {fileID: 1712347168}
+  - component: {fileID: 1712347167}
+  m_Layer: 0
+  m_Name: pos49
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1712347166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712347165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.92, y: -1.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712347167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712347165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &1712347168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712347165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.005239345, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31888348, y: 0.3607982}
   m_EdgeRadius: 0
 --- !u!1 &1719839609
 GameObject:
@@ -4549,7 +5178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719839609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.65, y: -1.44, z: 0}
+  m_LocalPosition: {x: -0.23, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4568,21 +5197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1719839610}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1719839612
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4596,7 +5211,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005239457, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4607,7 +5222,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.38175577, y: 0.4647624}
   m_EdgeRadius: 0
 --- !u!1 &1751888046
 GameObject:
@@ -4635,7 +5250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751888046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.13, y: 5.5, z: 0}
+  m_LocalPosition: {x: 0.777, y: 3.628, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4654,21 +5269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1751888047}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions:
+  - {fileID: 928753055}
+  - {fileID: 783801195}
 --- !u!61 &1751888049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4682,7 +5285,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012946963, y: 0.025894046}
+  m_Offset: {x: 0.014663048, y: 0.04152277}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4693,7 +5296,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2330443, y: 1.2330444}
+  m_Size: {x: 0.33340997, y: 0.39575517}
   m_EdgeRadius: 0
 --- !u!1 &1779154300
 GameObject:
@@ -4721,7 +5324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779154300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.11, y: -3.01, z: 0}
+  m_LocalPosition: {x: 2.31, y: 1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4740,21 +5343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1779154301}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1779154303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4768,7 +5357,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.020957425, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4779,7 +5368,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3293619, y: 0.41319168}
+  m_EdgeRadius: 0
+--- !u!1 &1805840387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805840388}
+  - component: {fileID: 1805840390}
+  - component: {fileID: 1805840389}
+  m_Layer: 0
+  m_Name: pos48
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1805840388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805840387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.79, y: -0.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805840389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805840387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &1805840390
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805840387}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.005239345, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27696836, y: 0.329362}
   m_EdgeRadius: 0
 --- !u!1 &1825496796
 GameObject:
@@ -4807,7 +5468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825496796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.74, y: 2.15, z: 0}
+  m_LocalPosition: {x: 1.05, y: 2.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4826,21 +5487,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1825496797}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions:
+  - {fileID: 928753055}
+  - {fileID: 783801195}
+  - {fileID: 795337758}
+  - {fileID: 1913569388}
 --- !u!61 &1825496799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4854,7 +5505,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000003874302, y: 0}
+  m_Offset: {x: 0.015718408, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4865,7 +5516,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2237737, y: 1.2237737}
+  m_Size: {x: 0.3959551, y: 0.4902635}
   m_EdgeRadius: 0
 --- !u!1 &1847526039
 GameObject:
@@ -5040,7 +5691,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278202111
-  m_fontColor: {r: 1, g: 0.18122572, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 0.91147983, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5201,7 +5852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913569387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -4.73, z: 0}
+  m_LocalPosition: {x: 1.12, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5220,21 +5871,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1913569388}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions:
+  - {fileID: 928753055}
+  - {fileID: 1825496797}
+  - {fileID: 2014721884}
+  - {fileID: 1471105283}
+  - {fileID: 138214607}
 --- !u!61 &1913569390
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5248,7 +5890,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000009685755, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5259,7 +5901,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.41319185, y: 0.49702168}
   m_EdgeRadius: 0
 --- !u!1 &1933502919
 GameObject:
@@ -5287,7 +5929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933502919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 2.08, z: 0}
+  m_LocalPosition: {x: 0.31, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5306,21 +5948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1933502920}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &1933502922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5334,7 +5962,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0052393004, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5345,7 +5973,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.31888354, y: 0.36079836}
   m_EdgeRadius: 0
 --- !u!1 &2014721883
 GameObject:
@@ -5373,7 +6001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014721883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.79, y: -4.81, z: 0}
+  m_LocalPosition: {x: 0.66, y: 1.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5392,21 +6020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2014721884}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &2014721886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5420,7 +6034,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.015718117, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5431,7 +6045,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.40271303, y: 0.48654273}
   m_EdgeRadius: 0
 --- !u!1 &2041841460
 GameObject:
@@ -5459,7 +6073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041841460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.87, y: 2.08, z: 0}
+  m_LocalPosition: {x: 0.99, y: 0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5478,21 +6092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPositionSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1205064549}
-        m_TargetAssemblyTypeName: PlayerMovePositions, Assembly-CSharp
-        m_MethodName: MoveSelectedPlayer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2041841461}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  neighborPositions: []
 --- !u!61 &2041841463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5506,7 +6106,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000052154064, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5517,7 +6117,79 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.39223433, y: 0.38175565}
+  m_EdgeRadius: 0
+--- !u!1 &2094706011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094706012}
+  - component: {fileID: 2094706014}
+  - component: {fileID: 2094706013}
+  m_Layer: 0
+  m_Name: pos38
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2094706012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094706011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.74, y: -0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094706013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094706011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &2094706014
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094706011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.005239345, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27696866, y: 0.32936227}
   m_EdgeRadius: 0
 --- !u!1 &2098264745
 GameObject:
@@ -5653,3 +6325,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098264745}
   m_CullTransparentMesh: 1
+--- !u!1 &2109230838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2109230839}
+  - component: {fileID: 2109230841}
+  - component: {fileID: 2109230840}
+  m_Layer: 0
+  m_Name: pos43
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2109230839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109230838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.39, y: -0.62, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 367660792}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2109230840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109230838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8039536f2045a1418af9e4076dd99ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighborPositions: []
+--- !u!61 &2109230841
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109230838}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01047875, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.30840465, y: 0.40271324}
+  m_EdgeRadius: 0

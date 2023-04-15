@@ -35,11 +35,11 @@ public class PlayerMovePositions : MonoBehaviour
     }
     #endregion
 
-    public void MoveSelectedPlayer(Transform movePos)
+    public void MoveSelectedPlayer(Transform movePos, Transform neighbor)
     {
-        if ((movePos.position - players[playerIndex].transform.position).magnitude < 3)
+        if (players[playerIndex].transform.position == neighbor.position)
         {
             players[playerIndex].transform.position = movePos.position;
-        };
+        }
     }
 }
