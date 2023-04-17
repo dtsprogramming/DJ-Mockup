@@ -35,11 +35,16 @@ public class PlayerMovePositions : MonoBehaviour
     }
     #endregion
 
-    public void MoveSelectedPlayer(Transform movePos, Transform neighbor)
+    public void MoveSelectedPlayer(Transform movePos, Transform[] neighbors)
     {
-        if (players[playerIndex].transform.position == neighbor.position)
+        Transform playerTF = players[playerIndex].transform;
+        foreach (Transform t in neighbors)
         {
-            players[playerIndex].transform.position = movePos.position;
+            if (playerTF.position.x == t.position.x || playerTF.position.y == t.position.y)
+            {
+                players[playerIndex].transform.position = new Vector3(movePos.position.x, movePos.position.y, 0);
+                return;
+            }
         }
     }
 }

@@ -5,22 +5,17 @@ using UnityEngine.Events;
 public class DetectSelectedPoint : MonoBehaviour
 {
     [SerializeField] private Transform[] neighborPositions;
+    [SerializeField] private PlayerMovePositions pmp;
 
-    private PlayerMovePositions pmp;
     private Transform tf;
 
     private void Start()
     {
-        tf = gameObject.GetComponent<Transform>();
-        pmp = FindObjectOfType<PlayerMovePositions>();
+        tf = GetComponent<Transform>();
     }
 
     private void OnMouseDown()
     {
-        for (int i = 0; i < neighborPositions.Length; i++)
-        {
-            pmp.MoveSelectedPlayer(tf, neighborPositions[i]);
-        }
-        
+        pmp.MoveSelectedPlayer(tf, neighborPositions);
     }
 }
