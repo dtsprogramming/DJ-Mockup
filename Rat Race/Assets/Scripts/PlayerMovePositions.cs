@@ -7,6 +7,11 @@ public class PlayerMovePositions : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerIndicator;
     [SerializeField] private List<GameObject> players = new List<GameObject>();
 
+    [Header("Dice roll for player movement")]
+    [SerializeField] private TextMeshProUGUI tmpDiceRoll;
+    [SerializeField, Range(1, 6)] private int diceMax = 3;
+    private int diceRoll = 0;
+
     private int playerIndex;
 
     #region Player Selection
@@ -40,11 +45,19 @@ public class PlayerMovePositions : MonoBehaviour
         Transform playerTF = players[playerIndex].transform;
         foreach (Transform t in neighbors)
         {
-            if (playerTF.position.x == t.position.x || playerTF.position.y == t.position.y)
+            if ((playerTF.position.x == t.position.x || playerTF.position.y == t.position.y) && diceRoll > 0)
             {
                 players[playerIndex].transform.position = new Vector3(movePos.position.x, movePos.position.y, 0);
+                diceRoll--;
+                tmpDiceRoll.text = diceRoll.ToString();
                 return;
             }
         }
+    }
+
+    public void DiceRollRandomNumGenerator()
+    {
+        diceRoll = Random.Range(1, diceMax + 1);
+        tmpDiceRoll.text = diceRoll.ToString();
     }
 }
