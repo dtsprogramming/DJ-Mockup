@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
         if (collision.gameObject == target)
         {
             target.SetActive(false);
+            SceneManager.LoadScene(0);
         }
     }
 }

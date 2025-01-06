@@ -12,31 +12,40 @@ public class PlayerMovePositions : MonoBehaviour
     [SerializeField, Range(1, 6)] private int diceMax = 3;
     private int diceRoll = 0;
 
-    private int playerIndex;
+    private int playerIndex = -1;
 
-    #region Player Selection
-    public void IsHuman()
+    private void Start()
     {
-        playerIndex = 0;
         playerIndicator.text = "HUMAN";
     }
 
-    public void IsDog()
+    #region Player Selection
+    public void SetActivePlayer()
     {
-        playerIndex = 1;
-        playerIndicator.text = "DOG";
-    }
+        if (playerIndex >= 3)
+        {
+            playerIndex = -1;
+        }
 
-    public void IsCat()
-    {
-        playerIndex = 2;
-        playerIndicator.text = "CAT";
-    }
+        playerIndex++;
 
-    public void IsRat()
-    {
-        playerIndex = 3;
-        playerIndicator.text = "RAT";
+        switch (playerIndex)
+        {
+            case 0: 
+                playerIndicator.text = "HUMAN";
+                break;
+            case 1:
+                playerIndicator.text = "DOG";
+                break;
+            case 2:
+                playerIndicator.text = "CAT";
+                break;
+            case 3:
+                playerIndicator.text = "RAT";
+                break;
+            default:
+                break;
+        }
     }
     #endregion
 
@@ -57,6 +66,8 @@ public class PlayerMovePositions : MonoBehaviour
 
     public void DiceRollRandomNumGenerator()
     {
+        SetActivePlayer();
+
         diceRoll = Random.Range(1, diceMax + 1);
         tmpDiceRoll.text = diceRoll.ToString();
     }
