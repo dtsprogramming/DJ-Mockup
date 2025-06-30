@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class DetectSelectedPoint : MonoBehaviour
 {
-    [SerializeField] private Transform[] neighborPositions;
+    [SerializeField] private List<Transform> neighborPositions;
     [SerializeField] private PlayerMovePositions pmp;
 
     private Transform tf;

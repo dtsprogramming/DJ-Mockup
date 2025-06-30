@@ -1,17 +1,29 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerAttack : MonoBehaviour
 {
     [Header("Add Attack Target")]
-    [SerializeField] private GameObject target;
+    [SerializeField] private GameObject[] targets;
+
+    private PlayerStatus status;
+
+    private GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = FindFirstObjectByType<GameManager>();
+        status = GetComponent<PlayerStatus>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == target)
+        if (collision.gameObject.tag != "MovePos")
         {
-            target.SetActive(false);
-            SceneManager.LoadScene(0);
+            if (status.GetActiveStatus())
+            {
+                collision.gameObject.SetActive(false);
+                gameManager.ReducePlayerCount();
+            }
         }
     }
 }
