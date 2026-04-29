@@ -1,9 +1,10 @@
 using TMPro;
 using UnityEngine;
+using Unity.Netcode;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : NetworkBehaviour
 {
     public static GameManager instance { get; private set; }
 
@@ -28,18 +29,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //if (instance != null && instance != this)
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else
-        //{
-        //    instance = this;
-        //    DontDestroyOnLoad(gameObject);
-        //}
-
         playerCount = players.Length;
-}
+    }
 
     private void Start()
     {
@@ -98,7 +89,7 @@ public class GameManager : MonoBehaviour
             SelectNextPlayer();
         }
         else
-        {
+        { 
             playerIndicator.text = $"PLAYER {index + 1}";
             playerGlow[index].enabled = true;
             pStat[index].SetActiveStatus(true);

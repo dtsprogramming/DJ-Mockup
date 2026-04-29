@@ -6,14 +6,20 @@ public class DeckManager : MonoBehaviour
 {
     [SerializeField] private Light2D deckGlow;
     [SerializeField] private List <GameObject> playingCards = new List<GameObject>();
-    [SerializeField] private Transform cardDraw;
+    [SerializeField] private Transform cardDrawTf;
 
     [Header("Card Counts")]
-    [SerializeField] private int plusOneCount = 30;
-    [SerializeField] private int plusTwoCount = 15;
-    [SerializeField] private int plusThreeCount = 5;
-    [SerializeField] private int noMoveCount = 10;
-    [SerializeField] private int invincibleCount = 4;
+    [SerializeField] private int plusOne = 30;
+    [SerializeField] private int plusTwo = 15;
+    [SerializeField] private int plusThree = 5;
+    [SerializeField] private int noMove = 10;
+    [SerializeField] private int invincible = 4;
+
+    private int plusOneCount;
+    private int plusTwoCount;
+    private int plusThreeCount;
+    private int noMoveCount;
+    private int invincibleCount;
 
     public int viewOrderMax = 0;
     private List<GameObject> oldCards = new List<GameObject>();
@@ -24,12 +30,25 @@ public class DeckManager : MonoBehaviour
 
     private void Start()
     {
+        plusOneCount = plusOne;
+        plusTwoCount = plusTwo;
+        plusThreeCount = plusThree;
+        noMoveCount = noMove;
+        invincibleCount = invincible;
+
         viewOrderMax = (plusOneCount + plusTwoCount + plusThreeCount + noMoveCount + invincibleCount) * -1;
     }
 
     private void OnMouseDown()
     {
-        if (playerCardDrawCount == 0)
+        if (viewOrderMax == -1) 
+        {
+            SpawnCardsAndMaintainCount();
+            deckGlow.enabled = false;
+            gameObject.SetActive(false);
+            Invoke("ResetDeck", 1.5f);
+        }
+        else if (playerCardDrawCount == 0)
         {
             SpawnCardsAndMaintainCount();
             deckGlow.enabled = false;
@@ -43,29 +62,24 @@ public class DeckManager : MonoBehaviour
         switch (randIndex)
         {
             case 0:
-                plusOneCount--;
                 if (plusOneCount <= 0) { plusOneCount = 0; SpawnCardsAndMaintainCount(); }
-                else { SpawnRandomCard(randIndex); }
+                else { SpawnRandomCard(randIndex); plusOneCount--; }
                 break;
             case 1:
-                plusTwoCount--;
                 if (plusTwoCount <= 0) { plusTwoCount = 0;  SpawnCardsAndMaintainCount(); }
-                else { SpawnRandomCard(randIndex); }
+                else { SpawnRandomCard(randIndex); plusTwoCount--; }
                 break;
             case 2:
-                plusThreeCount--;
                 if (plusThreeCount <= 0) { plusThreeCount = 0; SpawnCardsAndMaintainCount(); }
-                else { SpawnRandomCard(randIndex); }
+                else { SpawnRandomCard(randIndex); plusThreeCount--; }
                 break;
             case 3:
-                noMoveCount--;
                 if (noMoveCount <= 0) { noMoveCount = 0; SpawnCardsAndMaintainCount(); }
-                else { SpawnRandomCard(randIndex); }
+                else { SpawnRandomCard(randIndex); noMoveCount--; }
                 break;
             case 4:
-                invincibleCount--;
                 if (invincibleCount <= 0) { invincibleCount = 0; SpawnCardsAndMaintainCount(); }
-                else { SpawnRandomCard(randIndex); }
+                else { SpawnRandomCard(randIndex); invincibleCount--; }
                 break;
             default:
                 break;
@@ -74,7 +88,7 @@ public class DeckManager : MonoBehaviour
 
     private void SpawnRandomCard(int index)
     {
-        GameObject card = Instantiate(playingCards[index], cardDraw);
+        GameObject card = Instantiate(playingCards[index], cardDrawTf);
         countOfDrawnCards++;
         playerCardDrawCount++;
 
@@ -123,5 +137,19 @@ public class DeckManager : MonoBehaviour
 
         // Fallback to last index (should rarely happen)
         return weights.Length - 1;
+    }
+
+    private void ResetDeck()
+    {
+        Destroy(oldCards[1]);
+        Destroy(oldCards[0]);
+
+        plusOneCount = plusOne;
+        plusTwoCount = plusTwo;
+        plusThreeCount = plusThree;
+        noMoveCount = noMove;
+        invincibleCount = invincible;
+        viewOrderMax = (plusOneCount + plusTwoCount + plusThreeCount + noMoveCount + invincibleCount) * -1;
+        gameObject.SetActive(true);
     }
 }

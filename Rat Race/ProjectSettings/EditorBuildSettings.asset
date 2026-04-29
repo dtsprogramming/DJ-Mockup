@@ -8,7 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/s2_game.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 0
+    path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
+    guid: ecac56c0d5cc5ee408682dc9860ea685
+  - enabled: 1
+    path: Assets/Scenes/s1_session.unity
+    guid: 9f8f713033c5e5146b831a01de6c9f41
   m_configObjects:
+    com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 784e9cf34f6933a4f82241be887ec29b, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 7b4c98f3e5a4d5844bb2cc1ab1080143, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 226b6576d1dde154bbb743dcd0b486ae, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9f2d2ae6b0cf6b74b9d6f97b734dce81, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: efa2c78ee048f544fb2bbe96e9c8ce03, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 9184c14a8ceb1bc40a22303b145d72ad, type: 3}
+  m_UseUCBPForAssetBundles: 0
